@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Hello</title>
+    <style>
+        #main_image{
+            height: 70%;
+        }
+    </style>
+</head>
+<body>
+    <h1> Hello</h1>
+    <img id="main_image" src='/get'>
+    <img src="{{ url_for('static', filename='vkopeytsev.jpg')}}">
+    <script>
+        let img = document.getElementById("main_image");
+        img.onload  = function(){
+            img = document.getElementById("main_image").src = "/get?random="+new Date().getTime();
+        }
+    </script>
+</body>
+</html>
